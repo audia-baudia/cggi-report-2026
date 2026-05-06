@@ -1,0 +1,1048 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WCGA | Growth & Enhancement Committee · Convention 2026 Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@400;500;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --wcga-teal: #3CC8C4;
+            --midnight: #0B0F1A;
+            --navy: #1A2744;
+            --electric-magenta: #E91E63;
+            --hot-pink: #FF1B6B;
+            --vivid-gold: #FFB800;
+            --electric-cyan: #00D4FF;
+            --emerald-green: #00C853;
+            --royal-purple: #7C3AED;
+            --pure-white: #FFFFFF;
+            --silver: #B8C5D6;
+            --gradient-fire: linear-gradient(135deg, #E91E63 0%, #FF1B6B 50%, #FF6B35 100%);
+            --gradient-gold: linear-gradient(135deg, #FFB800 0%, #FFC847 50%, #FFE066 100%);
+            --gradient-teal: linear-gradient(135deg, #3CC8C4 0%, #2FB5B1 50%, #28A8A4 100%);
+            --gradient-emerald: linear-gradient(135deg, #00C853 0%, #00E676 50%, #69F0AE 100%);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html, body {
+            height: 100%;
+            overflow: hidden;
+            font-family: 'Source Sans 3', sans-serif;
+            background: var(--midnight);
+            color: var(--pure-white);
+        }
+
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0; left: 0; right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--wcga-teal) 0%, var(--emerald-green) 33%, var(--vivid-gold) 66%, var(--wcga-teal) 100%);
+            z-index: 9999;
+        }
+
+        .slides-container {
+            height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slide {
+            position: absolute;
+            top: 0; left: 0;
+            width: 100%; height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 2.5rem 4rem;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.6s ease, visibility 0.6s ease;
+            background: var(--midnight);
+            overflow-y: auto;
+        }
+
+        .slide.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .slide.has-bg {
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slide.has-bg::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(135deg, rgba(11,15,26,0.90) 0%, rgba(26,39,68,0.85) 100%);
+            z-index: 1;
+        }
+
+        .slide-content {
+            position: relative;
+            z-index: 2;
+            max-width: 1600px;
+            width: 100%;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 8rem;
+            letter-spacing: 0.05em;
+            line-height: 0.95;
+            margin-bottom: 1.75rem;
+            text-shadow: 0 0 80px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5.2rem;
+            letter-spacing: 0.05em;
+            line-height: 1;
+            margin-bottom: 1.5rem;
+        }
+
+        h3 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.8rem;
+            letter-spacing: 0.03em;
+            margin-bottom: 0.85rem;
+            color: var(--pure-white);
+        }
+
+        h4 {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 500;
+            letter-spacing: 0.02em;
+            color: var(--wcga-teal);
+            margin-bottom: 1rem;
+        }
+
+        .section-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.4rem;
+            font-weight: 600;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            background: var(--gradient-fire);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 1.4rem;
+            display: inline-block;
+        }
+
+        .section-label.teal {
+            background: var(--gradient-teal);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .section-label.gold {
+            background: var(--gradient-gold);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .section-label.emerald {
+            background: var(--gradient-emerald);
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        p {
+            font-size: 1.85rem;
+            line-height: 1.55;
+            color: var(--silver);
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        p.large {
+            font-size: 2.25rem;
+            color: var(--pure-white);
+        }
+
+        p.statement {
+            font-size: 2.5rem;
+            color: var(--pure-white);
+            font-weight: 600;
+            max-width: 1300px;
+            line-height: 1.4;
+        }
+
+        p.kicker {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.3rem;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--silver);
+            margin-top: 1.4rem;
+        }
+
+        .highlight { color: var(--pure-white); font-weight: 600; }
+        .teal { color: var(--wcga-teal); }
+        .gold { color: var(--vivid-gold); }
+        .pink { color: var(--hot-pink); }
+        .cyan { color: var(--electric-cyan); }
+        .green { color: var(--emerald-green); }
+        .purple { color: var(--royal-purple); }
+
+        .logo {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 11rem;
+            letter-spacing: 0.12em;
+            color: var(--wcga-teal);
+            margin-bottom: 1.5rem;
+            text-shadow:
+                0 0 40px rgba(60, 200, 196, 0.6),
+                0 0 80px rgba(60, 200, 196, 0.4),
+                0 0 120px rgba(60, 200, 196, 0.2);
+            animation: glow 3s ease-in-out infinite alternate;
+            line-height: 1;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 40px rgba(60, 200, 196, 0.6), 0 0 80px rgba(60, 200, 196, 0.4); }
+            to   { text-shadow: 0 0 60px rgba(60, 200, 196, 0.8), 0 0 100px rgba(60, 200, 196, 0.5), 0 0 140px rgba(60, 200, 196, 0.3); }
+        }
+
+        .tagline {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 400;
+            letter-spacing: 0.4em;
+            text-transform: uppercase;
+            color: var(--silver);
+            margin-top: 1.75rem;
+        }
+
+        .byline {
+            margin-top: 3rem;
+            display: flex;
+            justify-content: center;
+            gap: 3.5rem;
+            flex-wrap: wrap;
+        }
+        .byline .person {
+            text-align: center;
+        }
+        .byline .name {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 2.4rem;
+            letter-spacing: 0.05em;
+            color: var(--pure-white);
+            line-height: 1;
+        }
+        .byline .role {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.05rem;
+            letter-spacing: 0.28em;
+            text-transform: uppercase;
+            color: var(--wcga-teal);
+            margin-top: 0.5rem;
+        }
+
+        /* Grids */
+        .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5rem; margin-top: 2rem; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25rem; margin-top: 2rem; }
+
+        /* Cards (from manifesto) */
+        .card {
+            background: rgba(26, 39, 68, 0.7);
+            border: 2px solid rgba(60, 200, 196, 0.3);
+            border-radius: 14px;
+            padding: 2rem 2rem;
+            text-align: left;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--gradient-fire);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        .card:hover {
+            border-color: var(--hot-pink);
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 20px 60px rgba(233, 30, 99, 0.3);
+        }
+        .card:hover::before { opacity: 1; }
+        .card h3, .card h4, .card p {
+            position: relative;
+            z-index: 1;
+            transition: color 0.4s ease;
+        }
+        .card:hover h3, .card:hover h4 { color: var(--pure-white) !important; }
+        .card:hover p { color: rgba(255,255,255,0.95) !important; }
+        .card h3 {
+            font-size: 1.95rem;
+            margin-bottom: 0.4rem;
+            color: var(--wcga-teal);
+        }
+        .card h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.7rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            color: var(--silver);
+        }
+        .card p {
+            font-size: 1.35rem;
+            color: var(--silver);
+            text-align: left;
+            line-height: 1.5;
+        }
+
+        .card.pink-accent { border-left: 4px solid var(--hot-pink); }
+        .card.gold-accent { border-left: 4px solid var(--vivid-gold); }
+        .card.teal-accent { border-left: 4px solid var(--wcga-teal); }
+        .card.cyan-accent { border-left: 4px solid var(--electric-cyan); }
+        .card.green-accent { border-left: 4px solid var(--emerald-green); }
+        .card.purple-accent { border-left: 4px solid var(--royal-purple); }
+        .card.pink-accent h3 { color: var(--hot-pink); }
+        .card.gold-accent h3 { color: var(--vivid-gold); }
+        .card.teal-accent h3 { color: var(--wcga-teal); }
+        .card.cyan-accent h3 { color: var(--electric-cyan); }
+        .card.green-accent h3 { color: var(--emerald-green); }
+        .card.purple-accent h3 { color: var(--royal-purple); }
+
+        /* Member chip (small card for roster slides) */
+        .member-chip {
+            background: rgba(26, 39, 68, 0.55);
+            border: 1px solid rgba(60, 200, 196, 0.25);
+            border-left: 4px solid var(--wcga-teal);
+            border-radius: 10px;
+            padding: 1.05rem 1.35rem;
+            text-align: left;
+            transition: all 0.3s ease;
+        }
+        .member-chip:hover {
+            border-color: var(--hot-pink);
+            border-left-color: var(--hot-pink);
+            background: rgba(233, 30, 99, 0.12);
+            transform: translateY(-3px);
+        }
+        .member-chip .m-name {
+            font-family: 'Oswald', sans-serif;
+            font-weight: 600;
+            font-size: 1.4rem;
+            color: var(--pure-white);
+            letter-spacing: 0.02em;
+        }
+        .member-chip .m-school {
+            font-family: 'Source Sans 3', sans-serif;
+            font-size: 1.15rem;
+            color: var(--wcga-teal);
+            margin-top: 0.2rem;
+        }
+
+        /* Power list (bulleted with arrow) */
+        .power-list {
+            list-style: none;
+            text-align: left;
+            max-width: 1100px;
+            margin: 1.75rem auto 0;
+        }
+        .power-list li {
+            font-size: 1.65rem;
+            color: var(--silver);
+            padding: 1rem 0 1rem 2.8rem;
+            position: relative;
+            border-bottom: 1px solid rgba(60, 200, 196, 0.15);
+            transition: all 0.3s ease;
+            line-height: 1.45;
+        }
+        .power-list li strong {
+            color: var(--pure-white);
+            font-weight: 600;
+        }
+        .power-list li:hover {
+            color: var(--pure-white);
+            padding-left: 2.9rem;
+            border-bottom-color: var(--hot-pink);
+            background: linear-gradient(90deg, rgba(233, 30, 99, 0.18) 0%, transparent 100%);
+        }
+        .power-list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            top: 1rem;
+            color: var(--hot-pink);
+            font-size: 1.55rem;
+            transition: transform 0.3s ease;
+        }
+        .power-list li:hover::before {
+            transform: translateX(0.4rem);
+            color: var(--vivid-gold);
+        }
+
+        /* CTA-style highlight card */
+        .cta-card {
+            background: linear-gradient(135deg, rgba(60, 200, 196, 0.15) 0%, rgba(47, 181, 177, 0.1) 100%);
+            border: 2px solid rgba(60, 200, 196, 0.5);
+            border-radius: 16px;
+            padding: 2.6rem 3rem;
+            text-align: left;
+            max-width: 1100px;
+            margin: 1.75rem auto 0;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            position: relative;
+            overflow: hidden;
+        }
+        .cta-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background: var(--gradient-teal);
+            opacity: 0;
+            transition: opacity 0.4s ease;
+            z-index: 0;
+        }
+        .cta-card:hover {
+            border-color: var(--wcga-teal);
+            transform: translateY(-6px) scale(1.01);
+            box-shadow: 0 20px 60px rgba(60, 200, 196, 0.35);
+        }
+        .cta-card:hover::before { opacity: 1; }
+        .cta-card h3, .cta-card h4, .cta-card p {
+            position: relative;
+            z-index: 1;
+            transition: color 0.4s ease;
+        }
+        .cta-card:hover h3 { color: var(--vivid-gold) !important; }
+        .cta-card:hover h4 { color: var(--midnight) !important; }
+        .cta-card:hover p  { color: rgba(11,15,26,0.92) !important; }
+        .cta-card h3 {
+            color: var(--wcga-teal);
+            font-size: 1.7rem;
+            margin-bottom: 0.5rem;
+        }
+        .cta-card h4 {
+            color: var(--pure-white);
+            font-size: 2.6rem;
+            margin-bottom: 1rem;
+            letter-spacing: 0.03em;
+        }
+        .cta-card p {
+            font-size: 1.5rem;
+            text-align: left;
+            margin: 0;
+            color: var(--silver);
+            line-height: 1.5;
+        }
+
+        /* Stats */
+        .stat-row {
+            display: flex;
+            justify-content: center;
+            gap: 4rem;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .stat { text-align: center; }
+        .stat-number {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5.5rem;
+            line-height: 1;
+            color: var(--hot-pink);
+        }
+        .stat-number.gold { color: var(--vivid-gold); }
+        .stat-number.teal { color: var(--wcga-teal); }
+        .stat-number.green { color: var(--emerald-green); }
+        .stat-label {
+            font-family: 'Oswald', sans-serif;
+            font-size: 1.15rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--silver);
+            margin-top: 0.6rem;
+            line-height: 1.4;
+        }
+
+        .accent-line {
+            width: 100px;
+            height: 4px;
+            background: var(--gradient-fire);
+            margin: 1.75rem auto;
+            border-radius: 2px;
+        }
+
+        .impact-word {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 5.8rem;
+            display: block;
+            line-height: 1.1;
+            margin: 0.4rem 0;
+        }
+
+        /* Navigation */
+        .nav-controls {
+            position: fixed;
+            bottom: 1.5rem;
+            right: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            z-index: 100;
+            background: rgba(11, 15, 26, 0.95);
+            padding: 0.55rem 1.2rem;
+            border-radius: 60px;
+            border: 2px solid rgba(60, 200, 196, 0.4);
+            backdrop-filter: blur(10px);
+        }
+        .nav-btn {
+            background: none;
+            border: none;
+            color: var(--silver);
+            font-size: 1.6rem;
+            cursor: pointer;
+            padding: 0.4rem 0.7rem;
+            transition: all 0.3s ease;
+            border-radius: 8px;
+        }
+        .nav-btn:hover {
+            color: var(--wcga-teal);
+            background: rgba(60, 200, 196, 0.12);
+        }
+        .slide-counter {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.2rem;
+            letter-spacing: 0.1em;
+            color: var(--pure-white);
+            min-width: 80px;
+            text-align: center;
+        }
+        .slide-counter span { color: var(--wcga-teal); }
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 4px;
+            background: var(--gradient-fire);
+            z-index: 100;
+            transition: width 0.4s ease;
+        }
+        .fullscreen-btn {
+            position: fixed;
+            top: 1.5rem;
+            right: 1.5rem;
+            background: rgba(26, 39, 68, 0.9);
+            border: 2px solid rgba(60, 200, 196, 0.4);
+            color: var(--silver);
+            padding: 0.7rem 1.2rem;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: 'Oswald', sans-serif;
+            font-size: 0.85rem;
+            letter-spacing: 0.18em;
+            text-transform: uppercase;
+            z-index: 100;
+            transition: all 0.3s ease;
+        }
+        .fullscreen-btn:hover {
+            border-color: var(--wcga-teal);
+            color: var(--wcga-teal);
+            background: rgba(60, 200, 196, 0.1);
+        }
+
+        @media (max-width: 1400px) {
+            .slide { padding: 1.75rem 3rem; }
+            h1 { font-size: 6rem; }
+            h2 { font-size: 4.2rem; }
+            h3 { font-size: 2.4rem; }
+            p { font-size: 1.6rem; }
+            p.large { font-size: 1.95rem; }
+            p.statement { font-size: 2.15rem; }
+            .logo { font-size: 8.5rem; }
+            .impact-word { font-size: 4.8rem; }
+            .power-list li { font-size: 1.45rem; }
+            .card h3 { font-size: 1.7rem; }
+            .card p { font-size: 1.2rem; }
+            .member-chip .m-name { font-size: 1.25rem; }
+            .member-chip .m-school { font-size: 1.05rem; }
+            .cta-card h4 { font-size: 2.2rem; }
+            .cta-card p { font-size: 1.35rem; }
+        }
+        @media (max-width: 1024px) {
+            .slide { padding: 1.75rem 2rem; }
+            h1 { font-size: 3.8rem; }
+            h2 { font-size: 2.8rem; }
+            .logo { font-size: 5.5rem; }
+            .grid-3, .grid-4 { grid-template-columns: 1fr 1fr; }
+            .grid-2 { grid-template-columns: 1fr; }
+            .impact-word { font-size: 3rem; }
+            .byline { gap: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="progress-bar" id="progress"></div>
+    <button class="fullscreen-btn" onclick="toggleFullscreen()">&#9974; PRESENT</button>
+
+    <div class="slides-container">
+
+        <!-- ============================================
+             SECTION 1: TITLE
+             ============================================ -->
+
+        <!-- Slide 1: Title -->
+        <div class="slide active has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Dark.jpg');">
+            <div class="slide-content">
+                <div class="logo">WCGA</div>
+                <h1>Growth &amp; Enhancement<br><span class="teal">Committee Report</span></h1>
+                <p class="tagline">Convention 2026 · Collegiate Gymnastics Growth Initiative</p>
+                <div class="byline">
+                    <div class="person">
+                        <div class="name">Jenny Hansen</div>
+                        <div class="role">Chairman</div>
+                    </div>
+                    <div class="person">
+                        <div class="name">Brian Audia</div>
+                        <div class="role">Executive Director</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Agenda -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label">What We'll Cover</div>
+                <h2>Today's <span class="pink">Report</span></h2>
+                <ul class="power-list">
+                    <li><strong>Who we are.</strong> Leadership, members, and associate members.</li>
+                    <li><strong>How we organize.</strong> Our seven sub-committees.</li>
+                    <li><strong>What we accomplished.</strong> Highlights from the year.</li>
+                    <li><strong>Where we're going.</strong> Goals and priorities for the year ahead.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 2: WHO WE ARE
+             ============================================ -->
+
+        <!-- Slide 3: Section divider - Committee -->
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Corner.jpg');">
+            <div class="slide-content">
+                <div class="section-label teal">Section One</div>
+                <h1>The <span class="teal">Committee</span></h1>
+                <p class="large">Leadership, members, and associate members driving the Growth &amp; Enhancement Initiative.</p>
+            </div>
+        </div>
+
+        <!-- Slide 4: Leadership -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label">Leadership</div>
+                <h2>Who's <span class="teal">Driving This</span></h2>
+                <div class="grid-3">
+                    <div class="card pink-accent">
+                        <h4>Chair</h4>
+                        <h3>Jenny Hansen</h3>
+                        <p>Sets direction for the committee and represents the initiative within WCGA leadership.</p>
+                    </div>
+                    <div class="card gold-accent">
+                        <h4>Executive Director</h4>
+                        <h3>Brian Audia</h3>
+                        <p>Runs day-to-day operations of the committee and the Collegiate Gymnastics Growth Initiative.</p>
+                    </div>
+                    <div class="card teal-accent">
+                        <h4>Assistant Director</h4>
+                        <h3>Katie Brading</h3>
+                        <p>Partners with the Director on execution, sub-committee coordination, and member support.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Committee Members -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label">Committee Members</div>
+                <h2>The People <span class="pink">Doing The Work</span></h2>
+                <div class="grid-3" style="gap: 1rem; margin-top: 2rem;">
+                    <div class="member-chip">
+                        <div class="m-name">Kiersten Becker</div>
+                        <div class="m-school">Penn</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Katie Minasola</div>
+                        <div class="m-school">Eastern Michigan</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Cali Hager</div>
+                        <div class="m-school">Michigan</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Sunny Marchand</div>
+                        <div class="m-school">George Washington</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Emily Barret Payne</div>
+                        <div class="m-school">Simpson</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Jeffrey Langenstein</div>
+                        <div class="m-school">Washington</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Rachel</div>
+                        <div class="m-school">Washington</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Brittany McClure</div>
+                        <div class="m-school">California</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Jennifer Green</div>
+                        <div class="m-school">Air Force</div>
+                    </div>
+                    <div class="member-chip">
+                        <div class="m-name">Sarah Carver Milne</div>
+                        <div class="m-school">???</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: Associate Members -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label gold">Associate Members</div>
+                <h2>Trusted <span class="gold">Partners</span></h2>
+                <p>Associate members bring outside expertise and lived experience to the committee's work.</p>
+                <div class="grid-4" style="margin-top: 2.5rem;">
+                    <div class="member-chip" style="border-left-color: var(--vivid-gold);">
+                        <div class="m-name">Cory Tomlinson</div>
+                        <div class="m-school" style="color: var(--vivid-gold);">Associate Member</div>
+                    </div>
+                    <div class="member-chip" style="border-left-color: var(--vivid-gold);">
+                        <div class="m-name">Olivia Karas</div>
+                        <div class="m-school" style="color: var(--vivid-gold);">Associate Member</div>
+                    </div>
+                    <div class="member-chip" style="border-left-color: var(--vivid-gold);">
+                        <div class="m-name">Justin James</div>
+                        <div class="m-school" style="color: var(--vivid-gold);">Associate Member</div>
+                    </div>
+                    <div class="member-chip" style="border-left-color: var(--vivid-gold);">
+                        <div class="m-name">Emily James</div>
+                        <div class="m-school" style="color: var(--vivid-gold);">Associate Member</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 3: HOW WE ORGANIZE
+             ============================================ -->
+
+        <!-- Slide 7: Sub-committees Section Divider -->
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Floor.jpg');">
+            <div class="slide-content">
+                <div class="section-label gold">Section Two</div>
+                <h1>How We <span class="gold">Organize</span></h1>
+                <p class="large">Seven sub-committees, each focused on a specific lever of growth.</p>
+            </div>
+        </div>
+
+        <!-- Slide 8: Sub-Committees Grid -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label">Our Sub-Committees</div>
+                <h2>Seven Areas of <span class="teal">Focus</span></h2>
+                <div class="grid-3" style="gap: 1.1rem; margin-top: 1.5rem;">
+                    <div class="card pink-accent">
+                        <h3>Championship Enhancement</h3>
+                        <p>Elevating the on-site experience and presentation of NCAA Championships.</p>
+                    </div>
+                    <div class="card gold-accent">
+                        <h3>Launch Support</h3>
+                        <p>Helping new and emerging programs stand up successfully and stay sustainable.</p>
+                    </div>
+                    <div class="card teal-accent">
+                        <h3>Marketing &amp; Media</h3>
+                        <p>Telling the sport's story through coordinated marketing and media strategy.</p>
+                    </div>
+                    <div class="card cyan-accent">
+                        <h3>Intra-Association Growth</h3>
+                        <p>Strengthening every program inside the association so the whole sport rises.</p>
+                    </div>
+                    <div class="card green-accent">
+                        <h3>Fundraising</h3>
+                        <p>Identifying, securing, and stewarding the resources our growth depends on.</p>
+                    </div>
+                    <div class="card purple-accent">
+                        <h3>USAG / Men's Gymnastics</h3>
+                        <p>Partnering across the gymnastics ecosystem to grow the sport together.</p>
+                    </div>
+                    <div class="card sub-feature" style="grid-column: 1 / -1; border: 2px solid rgba(60, 200, 196, 0.55); border-left: 4px solid var(--wcga-teal); background: linear-gradient(135deg, rgba(60, 200, 196, 0.12) 0%, rgba(47, 181, 177, 0.06) 100%); display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap;">
+                        <h3 style="color: var(--wcga-teal); margin-bottom: 0; flex-shrink: 0;">Internal Communication</h3>
+                        <p style="margin: 0; flex: 1; min-width: 280px;">The connective tissue. Keeps every sub-committee, member program, and partner aligned on what we're doing and why.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 4: ACCOMPLISHMENTS
+             ============================================ -->
+
+        <!-- Slide 9: Accomplishments Divider -->
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Corner.jpg');">
+            <div class="slide-content">
+                <div class="section-label emerald">Section Three</div>
+                <h1>What We <span class="green">Accomplished</span></h1>
+                <p class="large">Highlights from the year that prove the model works.</p>
+            </div>
+        </div>
+
+        <!-- Slide 10: Accomplishments Grid -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label emerald">This Year's Wins</div>
+                <h2>Real <span class="green">Progress</span></h2>
+                <div class="grid-3">
+                    <div class="card pink-accent">
+                        <h4>Fan Experience</h4>
+                        <h3>NCAA Championship Fan Fest</h3>
+                        <p>Delivered a fan-first activation at the NCAA Championships, raising the bar for what a national-meet experience can be.</p>
+                    </div>
+                    <div class="card gold-accent">
+                        <h4>New Program</h4>
+                        <h3>McMurray University</h3>
+                        <p>Welcomed McMurray University, growing the footprint of women's collegiate gymnastics with a new program.</p>
+                    </div>
+                    <div class="card teal-accent">
+                        <h4>Pipeline</h4>
+                        <h3>Texas State Follow-Up</h3>
+                        <p>Continued direct engagement with Texas State as part of our active pipeline of prospective programs.</p>
+                    </div>
+                </div>
+                <p class="kicker">Three signals. One direction: forward.</p>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 5: GOALS MOVING FORWARD
+             ============================================ -->
+
+        <!-- Slide 11: Goals Divider -->
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Dark.jpg');">
+            <div class="slide-content">
+                <div class="section-label">Section Four</div>
+                <h1>Where We're <span class="pink">Going</span></h1>
+                <p class="large">Our priorities for the year ahead, organized around growth, experience, and resources.</p>
+            </div>
+        </div>
+
+        <!-- Slide 12: Goal - Adding Programs -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label">Goal One</div>
+                <h2>Add <span class="gold">Programs</span></h2>
+                <p class="statement">Keep building the footprint. Every new program is more athletes, more fans, and more proof that this sport belongs on every campus.</p>
+                <div class="cta-card" style="margin-top: 2rem;">
+                    <h3>What This Looks Like</h3>
+                    <h4>Active Pipeline. <span class="teal">Real Conversations.</span></h4>
+                    <p>Building on momentum from McMurray and the ongoing Texas State follow-up, we'll keep working a clear pipeline of prospective programs and supporting them through launch.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 13: Goal - Fan Experience -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label">Goal Two</div>
+                <h2>Enhance The <span class="pink">Fan Experience</span></h2>
+                <p>Two fronts. Both matter.</p>
+                <div class="grid-2" style="margin-top: 2rem;">
+                    <div class="card pink-accent">
+                        <h4>Postseason</h4>
+                        <h3>Championships</h3>
+                        <p>Build on the Fan Fest blueprint. Make the Championships environment unmistakably premier, year after year.</p>
+                    </div>
+                    <div class="card gold-accent">
+                        <h4>Every Weekend</h4>
+                        <h3>Regular Season</h3>
+                        <p>Bring the same fan-first thinking to regular-season meets. The product is great; the experience around it should match.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 14: Goal - Grow Existing Programs -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label">Goal Three</div>
+                <h2>Grow <span class="teal">Every Program</span></h2>
+                <p>A stronger sport means stronger programs at every level. We'll lean into education and direct support.</p>
+                <ul class="power-list">
+                    <li><strong>Monthly educational Zooms.</strong> Sessions led by our own members, sharing what's working at their programs.</li>
+                    <li><strong>Direct support.</strong> Programmatic help available to any program in the association that needs it.</li>
+                    <li><strong>Members teaching members.</strong> The expertise is already in the room, we just need to make it easier to share.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Slide 15: Goal - Fundraising -->
+        <div class="slide">
+            <div class="slide-content">
+                <div class="section-label gold">Goal Four</div>
+                <h2>Fund The <span class="gold">Future</span></h2>
+                <p class="statement">We keep looking for funding sources, and we go back to an idea that has worked before.</p>
+                <div class="cta-card" style="margin-top: 2rem; background: linear-gradient(135deg, rgba(255, 184, 0, 0.15) 0%, rgba(255, 200, 71, 0.10) 100%); border-color: rgba(255, 184, 0, 0.5);">
+                    <h3 style="color: var(--vivid-gold);">The Idea</h3>
+                    <h4>Camp Donations: <span class="gold">$ Per Camp</span></h4>
+                    <p>A simple, repeatable model. A flat per-camp donation from member programs creates a steady, predictable funding base while we continue to pursue larger sources of support.</p>
+                </div>
+                <p class="kicker">Predictable. Member-powered. Easy to start.</p>
+            </div>
+        </div>
+
+        <!-- ============================================
+             SECTION 6: CLOSE
+             ============================================ -->
+
+        <!-- Slide 16: Close - Movement -->
+        <div class="slide">
+            <div class="slide-content">
+                <span class="impact-word teal">Add Programs.</span>
+                <span class="impact-word gold">Elevate The Experience.</span>
+                <span class="impact-word pink">Grow The Sport.</span>
+                <div class="accent-line"></div>
+                <p class="large">That's the assignment. That's the year ahead.</p>
+            </div>
+        </div>
+
+        <!-- Slide 17: Thank You -->
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Corner.jpg');">
+            <div class="slide-content">
+                <div class="logo">WCGA</div>
+                <h1>Thank <span class="teal">You</span></h1>
+                <p class="large">Growth &amp; Enhancement Committee · Collegiate Gymnastics Growth Initiative</p>
+                <div class="byline">
+                    <div class="person">
+                        <div class="name">Jenny Hansen</div>
+                        <div class="role">Chairman</div>
+                    </div>
+                    <div class="person">
+                        <div class="name">Brian Audia</div>
+                        <div class="role">Executive Director</div>
+                    </div>
+                    <div class="person">
+                        <div class="name">Katie Brading</div>
+                        <div class="role">Assistant Director</div>
+                    </div>
+                </div>
+                <p class="tagline" style="margin-top: 2.5rem;">Building the Premier Women's Collegiate Sport</p>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Navigation -->
+    <div class="nav-controls">
+        <button class="nav-btn" onclick="prevSlide()">&larr;</button>
+        <span class="slide-counter"><span id="current">1</span> / <span id="total">17</span></span>
+        <button class="nav-btn" onclick="nextSlide()">&rarr;</button>
+    </div>
+
+    <script>
+        const slides = document.querySelectorAll('.slide');
+        const progress = document.getElementById('progress');
+        const currentEl = document.getElementById('current');
+        const totalEl = document.getElementById('total');
+        let currentSlide = 0;
+
+        totalEl.textContent = slides.length;
+
+        function showSlide(index) {
+            slides.forEach(s => s.classList.remove('active'));
+            slides[index].classList.add('active');
+            slides[index].scrollTop = 0;
+            currentEl.textContent = index + 1;
+            progress.style.width = ((index + 1) / slides.length * 100) + '%';
+        }
+
+        function nextSlide() {
+            currentSlide = (currentSlide + 1) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function prevSlide() {
+            currentSlide = (currentSlide - 1 + slides.length) % slides.length;
+            showSlide(currentSlide);
+        }
+
+        function toggleFullscreen() {
+            if (!document.fullscreenElement) {
+                document.documentElement.requestFullscreen();
+            } else {
+                document.exitFullscreen();
+            }
+        }
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ' || e.key === 'Enter') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                prevSlide();
+            } else if (e.key === 'f' || e.key === 'F') {
+                toggleFullscreen();
+            } else if (e.key === 'Home') {
+                currentSlide = 0;
+                showSlide(currentSlide);
+            } else if (e.key === 'End') {
+                currentSlide = slides.length - 1;
+                showSlide(currentSlide);
+            }
+        });
+
+        document.addEventListener('click', (e) => {
+            if (
+                e.target.closest('.nav-controls') ||
+                e.target.closest('.fullscreen-btn') ||
+                e.target.closest('.card') ||
+                e.target.closest('.cta-card') ||
+                e.target.closest('.member-chip')
+            ) return;
+            if (e.clientX > window.innerWidth / 2) nextSlide();
+            else prevSlide();
+        });
+
+        let touchStartX = 0;
+        document.addEventListener('touchstart', (e) => {
+            touchStartX = e.touches[0].clientX;
+        });
+        document.addEventListener('touchend', (e) => {
+            const touchEndX = e.changedTouches[0].clientX;
+            const diff = touchStartX - touchEndX;
+            if (Math.abs(diff) > 50) {
+                if (diff > 0) nextSlide();
+                else prevSlide();
+            }
+        });
+    </script>
+</body>
+</html>
