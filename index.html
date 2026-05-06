@@ -166,11 +166,13 @@
             color: var(--silver);
             max-width: 1200px;
             margin: 0 auto;
+            text-wrap: balance;
         }
 
         p.large {
             font-size: 2.25rem;
             color: var(--pure-white);
+            text-wrap: balance;
         }
 
         p.statement {
@@ -179,6 +181,7 @@
             font-weight: 600;
             max-width: 1300px;
             line-height: 1.4;
+            text-wrap: balance;
         }
 
         p.kicker {
@@ -392,6 +395,15 @@
         .power-list li:hover::before {
             transform: translateX(0.4rem);
             color: var(--vivid-gold);
+        }
+
+        .power-list-lg li {
+            font-size: 2.05rem;
+            padding: 1.2rem 0 1.2rem 3rem;
+        }
+        .power-list-lg li::before {
+            font-size: 1.85rem;
+            top: 1.2rem;
         }
 
         /* CTA-style highlight card */
@@ -627,7 +639,7 @@
             <div class="slide-content">
                 <div class="section-label">What We'll Cover</div>
                 <h2>Today's <span class="pink">Report</span></h2>
-                <ul class="power-list">
+                <ul class="power-list power-list-lg">
                     <li><strong>Who we are.</strong> Leadership, members, and associate members.</li>
                     <li><strong>How we organize.</strong> Our seven sub-committees.</li>
                     <li><strong>What we accomplished.</strong> Highlights from the year.</li>
@@ -645,12 +657,12 @@
             <div class="slide-content">
                 <div class="section-label teal">Section One</div>
                 <h1>The <span class="teal">Committee</span></h1>
-                <p class="large">Leadership, members, and associate members driving the Growth &amp; Enhancement Initiative.</p>
+                <p class="large">Leadership, members, and associate members driving<br><span style="white-space: nowrap;">the Growth &amp; Enhancement Initiative.</span></p>
             </div>
         </div>
 
         <!-- Slide 4: Leadership -->
-        <div class="slide">
+        <div class="slide" style="justify-content: flex-start; padding-top: 4rem;">
             <div class="slide-content">
                 <div class="section-label">Leadership</div>
                 <h2>Who's <span class="teal">Driving This</span></h2>
@@ -667,7 +679,7 @@
                     </div>
                     <div class="card teal-accent">
                         <h4>Assistant Director</h4>
-                        <h3>Katie Brading</h3>
+                        <h3>Dr. Katie Brading</h3>
                         <p>Partners with the Director on execution, sub-committee coordination, and member support.</p>
                     </div>
                 </div>
@@ -681,7 +693,7 @@
                 <h2>The People <span class="pink">Doing The Work</span></h2>
                 <div class="grid-3" style="gap: 1rem; margin-top: 2rem;">
                     <div class="member-chip">
-                        <div class="m-name">Kiersten Becker</div>
+                        <div class="m-name">Kirsten Becker</div>
                         <div class="m-school">Penn</div>
                     </div>
                     <div class="member-chip">
@@ -705,7 +717,7 @@
                         <div class="m-school">Washington</div>
                     </div>
                     <div class="member-chip">
-                        <div class="m-name">Rachel</div>
+                        <div class="m-name">Rachel David</div>
                         <div class="m-school">Washington</div>
                     </div>
                     <div class="member-chip">
@@ -717,15 +729,15 @@
                         <div class="m-school">Air Force</div>
                     </div>
                     <div class="member-chip">
-                        <div class="m-name">Sarah Carver Milne</div>
-                        <div class="m-school">???</div>
+                        <div class="m-name">Sara Carver-Milne</div>
+                        <div class="m-school">TBD</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- Slide 6: Associate Members -->
-        <div class="slide">
+        <div class="slide" style="justify-content: flex-start; padding-top: 4rem;">
             <div class="slide-content">
                 <div class="section-label gold">Associate Members</div>
                 <h2>Trusted <span class="gold">Partners</span></h2>
@@ -756,7 +768,7 @@
              ============================================ -->
 
         <!-- Slide 7: Sub-committees Section Divider -->
-        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Floor.jpg');">
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Floor.jpg'); justify-content: flex-start; padding-top: 4rem;">
             <div class="slide-content">
                 <div class="section-label gold">Section Two</div>
                 <h1>How We <span class="gold">Organize</span></h1>
@@ -794,9 +806,9 @@
                         <h3>USAG / Men's Gymnastics</h3>
                         <p>Partnering across the gymnastics ecosystem to grow the sport together.</p>
                     </div>
-                    <div class="card sub-feature" style="grid-column: 1 / -1; border: 2px solid rgba(60, 200, 196, 0.55); border-left: 4px solid var(--wcga-teal); background: linear-gradient(135deg, rgba(60, 200, 196, 0.12) 0%, rgba(47, 181, 177, 0.06) 100%); display: flex; align-items: baseline; gap: 1.5rem; flex-wrap: wrap;">
-                        <h3 style="color: var(--wcga-teal); margin-bottom: 0; flex-shrink: 0;">Internal Communication</h3>
-                        <p style="margin: 0; flex: 1; min-width: 280px;">The connective tissue. Keeps every sub-committee, member program, and partner aligned on what we're doing and why.</p>
+                    <div class="card sub-feature" style="grid-column: 1 / -1; border: 2px solid rgba(60, 200, 196, 0.55); border-left: 4px solid var(--wcga-teal); background: linear-gradient(135deg, rgba(60, 200, 196, 0.12) 0%, rgba(47, 181, 177, 0.06) 100%); text-align: center; padding: 1.4rem 2rem;">
+                        <h3 style="color: var(--wcga-teal); margin-bottom: 0.4rem;">Internal Communication</h3>
+                        <p style="font-size: 1.3rem; max-width: 900px; margin: 0 auto; text-wrap: balance; text-align: center;">The connective tissue. Keeps every sub-committee, program, and partner aligned.</p>
                     </div>
                 </div>
             </div>
@@ -807,7 +819,7 @@
              ============================================ -->
 
         <!-- Slide 9: Accomplishments Divider -->
-        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Corner.jpg');">
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Corner.jpg'); justify-content: flex-start; padding-top: 4rem;">
             <div class="slide-content">
                 <div class="section-label emerald">Section Three</div>
                 <h1>What We <span class="green">Accomplished</span></h1>
@@ -846,7 +858,7 @@
              ============================================ -->
 
         <!-- Slide 11: Goals Divider -->
-        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Dark.jpg');">
+        <div class="slide has-bg" style="background-image: url('https://audia-consulting.github.io/wcga-manifesto/Dickies-Arena-Dark.jpg'); justify-content: flex-start; padding-top: 4rem;">
             <div class="slide-content">
                 <div class="section-label">Section Four</div>
                 <h1>Where We're <span class="pink">Going</span></h1>
@@ -925,11 +937,11 @@
         <!-- Slide 16: Close - Movement -->
         <div class="slide">
             <div class="slide-content">
-                <span class="impact-word teal">Add Programs.</span>
-                <span class="impact-word gold">Elevate The Experience.</span>
-                <span class="impact-word pink">Grow The Sport.</span>
+                <span class="impact-word teal" style="font-size: 7rem;">Add Programs.</span>
+                <span class="impact-word gold" style="font-size: 7rem;">Elevate The Experience.</span>
+                <span class="impact-word pink" style="font-size: 7rem;">Grow The Sport.</span>
                 <div class="accent-line"></div>
-                <p class="large">That's the assignment. That's the year ahead.</p>
+                <p class="large" style="font-size: 2.7rem;">That's the assignment. That's the year ahead.</p>
             </div>
         </div>
 
@@ -949,11 +961,11 @@
                         <div class="role">Executive Director</div>
                     </div>
                     <div class="person">
-                        <div class="name">Katie Brading</div>
+                        <div class="name">Dr. Katie Brading</div>
                         <div class="role">Assistant Director</div>
                     </div>
                 </div>
-                <p class="tagline" style="margin-top: 2.5rem;">Building the Premier Women's Collegiate Sport</p>
+                <p class="tagline" style="margin-top: 2.5rem; color: var(--hot-pink); text-shadow: 0 0 25px rgba(255, 27, 107, 0.55), 0 0 45px rgba(233, 30, 99, 0.35);">Building the Premier Women's Collegiate Sport</p>
             </div>
         </div>
 
